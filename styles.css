@@ -13,6 +13,9 @@ body {
     padding: 20px;
     background-color: var(--background);
     color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .profile-header {
@@ -332,4 +335,31 @@ body {
 .pagination button:disabled {
     opacity: 0.5;
     cursor: not-allowed;
+}
+
+.main-content {
+    flex: 1;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: auto;
+}
+
+.site-footer a {
+    color: white;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: opacity 0.3s;
+}
+
+.site-footer a:hover {
+    opacity: 0.8;
+}
+
+.fab.fa-github {
+    font-size: 1.5rem;
 }
