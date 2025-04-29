@@ -1,5 +1,8 @@
 // script.js
-const images = [
+let currentPage = 1;
+const itemsPerPage = 40;
+let currentFilteredImages = [];
+const allImages = [
   {
     url: "https://pbs.twimg.com/media/GpqWV7WWAAE7UWt?format=jpg&name=large",
     tags: ["pokemon", "fennekin"],
@@ -238,8 +241,13 @@ const images = [
 
 function initializeGallery() {
   const gallery = document.getElementById("imageGallery");
+  gallery.innerHTML = "";
 
-  images.forEach((image) => {
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const pageImages = currentFilteredImages.slice(startIndex, endIndex);
+
+  pageImages.forEach((image) => {
     const item = document.createElement("div");
     item.className = "gallery-item";
     item.setAttribute("data-tags", image.tags.join(" "));
@@ -275,17 +283,17 @@ function initializeGallery() {
 
     gallery.appendChild(item);
   });
+  updatePaginationControls();
+  scrollToTop();
 }
 
 document.getElementById("searchInput").addEventListener("input", function (e) {
   const searchTerm = e.target.value.toLowerCase();
-  const items = document.querySelectorAll(".gallery-item");
-
-  items.forEach((item) => {
-    const tags = item.getAttribute("data-tags").toLowerCase();
-    const isVisible = searchTerm === "" || tags.includes(searchTerm);
-    item.style.display = isVisible ? "block" : "none";
-  });
+  currentFilteredImages = allImages.filter((image) =>
+    image.tags.some((tag) => tag.toLowerCase().includes(searchTerm)),
+  );
+  currentPage = 1;
+  initializeGallery();
 });
 
 document.getElementById("lightbox").addEventListener("click", function (e) {
@@ -324,11 +332,10 @@ viewTagsBtn.className = "view-tags-btn";
 viewTagsBtn.textContent = "View All Tags";
 document.querySelector(".search-container").prepend(viewTagsBtn);
 
-// Tag collection function
 function collectTags() {
   const tagCounts = {};
 
-  images.forEach((image) => {
+  allImages.forEach((image) => {
     image.tags.forEach((tag) => {
       tagCounts[tag] = (tagCounts[tag] || 0) + 1;
     });
@@ -337,7 +344,6 @@ function collectTags() {
   return tagCounts;
 }
 
-// Show tags modal
 viewTagsBtn.addEventListener("click", () => {
   const tags = collectTags();
   tagsList.innerHTML = Object.entries(tags)
@@ -356,7 +362,6 @@ viewTagsBtn.addEventListener("click", () => {
   setTimeout(() => tagsModal.classList.add("active"), 10);
 });
 
-// Close modal functions
 function closeTagsModal() {
   tagsModal.classList.remove("active");
   setTimeout(() => (tagsModal.style.display = "none"), 300);
@@ -367,7 +372,6 @@ tagsModal.addEventListener("click", (e) => {
   if (e.target === tagsModal) closeTagsModal();
 });
 
-// Click tag in modal to search
 tagsList.addEventListener("click", (e) => {
   if (e.target.closest(".tag-count")) {
     const tag = e.target
@@ -376,14 +380,58 @@ tagsList.addEventListener("click", (e) => {
     searchInput.value = tag;
     searchInput.dispatchEvent(new Event("input"));
     closeTagsModal();
+    scrollToTop();
   }
 });
 
-// Escape key to close
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && tagsModal.classList.contains("active")) {
     closeTagsModal();
   }
 });
 
-window.onload = initializeGallery;
+function updatePaginationControls() {
+  const totalPages = Math.ceil(currentFilteredImages.length / itemsPerPage);
+  const pagination = document.createElement("div");
+  pagination.className = "pagination";
+
+  pagination.innerHTML = `
+        <button ${currentPage === 1 ? "disabled" : ""} class="prev-page">Previous</button>
+        <span>Page ${currentPage} of ${totalPages}</span>
+        <button ${currentPage >= totalPages ? "disabled" : ""} class="next-page">Next</button>
+    `;
+
+  pagination.querySelector(".prev-page").addEventListener("click", () => {
+    currentPage--;
+    initializeGallery();
+  });
+
+  pagination.querySelector(".next-page").addEventListener("click", () => {
+    currentPage++;
+    initializeGallery();
+  });
+
+  const existingPagination = document.querySelector(".pagination");
+  if (existingPagination) existingPagination.remove();
+
+  document.querySelector("main").appendChild(pagination);
+}
+
+function scrollToTop() {
+  try {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  } catch (e) {
+    window.scrollTo(0, 0);
+  }
+
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+}
+
+window.onload = () => {
+  currentFilteredImages = [...allImages];
+  initializeGallery();
+};
