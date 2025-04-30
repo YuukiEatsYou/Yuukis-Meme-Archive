@@ -4,6 +4,10 @@ const itemsPerPage = 40;
 let currentFilteredImages = [];
 const allImages = [
   {
+    url: "https://pbs.twimg.com/media/Gpv_b3lWIAA8_BC?format=jpg&name=large",
+    tags: ["smug", "sandwich", "food"],
+  },
+  {
     url: "https://pbs.twimg.com/media/Gpv5vSJXIAAjWNr?format=jpg&name=large",
     tags: ["happy", "rice", "food"],
   },
