@@ -4,6 +4,10 @@ const itemsPerPage = 40;
 let currentFilteredImages = [];
 const allImages = [
   {
+    url: "https://pbs.twimg.com/media/Gp0f4BoXkAAjA60?format=jpg&name=large",
+    tags: ["gun", "threatening", "denial", "aether"],
+  },
+  {
     url: "https://pbs.twimg.com/media/Gp0aCVYXgAAHSke?format=jpg&name=medium",
     tags: ["dont call me pookie", "im a gangsta", "smug"],
   },
