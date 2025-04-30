@@ -4,6 +4,10 @@ const itemsPerPage = 40;
 let currentFilteredImages = [];
 const allImages = [
   {
+    url: "https://pbs.twimg.com/media/Gpv5vSJXIAAjWNr?format=jpg&name=large",
+    tags: ["happy", "rice", "food"],
+  },
+  {
     url: "https://pbs.twimg.com/media/GpqWV7WWAAE7UWt?format=jpg&name=large",
     tags: ["pokemon", "fennekin"],
   },
@@ -13,7 +17,7 @@ const allImages = [
   },
   {
     url: "https://pbs.twimg.com/media/GpqD10aXYAAiFLt?format=jpg&name=large",
-    tags: ["happy", "cookie", "eating", "cute"],
+    tags: ["happy", "cookie", "eating", "cute", "food"],
   },
   {
     url: "https://pbs.twimg.com/media/Gpp62FAWQAA0rhC?format=png&name=small",
@@ -211,7 +215,7 @@ const allImages = [
   },
   {
     url: "https://pbs.twimg.com/media/Gmw48gfWIAAB8MV?format=jpg&name=large",
-    tags: ["krusty krab", "burger", "spongebob"],
+    tags: ["krusty krab", "burger", "spongebob", "food"],
   },
   {
     url: "https://pbs.twimg.com/media/Gmwv3XIbIAAmiSy?format=jpg&name=large",
