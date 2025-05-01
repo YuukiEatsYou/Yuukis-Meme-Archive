@@ -4,6 +4,42 @@ const itemsPerPage = 40;
 let currentFilteredImages = [];
 const allImages = [
   {
+    url: "https://pbs.twimg.com/media/Gp3-vyUWIAANkYX?format=jpg&name=large",
+    tags: ["smug", "smile", "liyue"],
+  },
+  {
+    url: "https://pbs.twimg.com/media/Gp3-vzWWcAAQKsH?format=jpg&name=large",
+    tags: ["smug", "smile", "liyue"],
+  },
+  {
+    url: "https://pbs.twimg.com/media/Gp3-vyQWoAAm1Gt?format=jpg&name=large",
+    tags: ["smug", "smile", "liyue"],
+  },
+  {
+    url: "https://pbs.twimg.com/media/Gp3-vyIWcAAI1m7?format=jpg&name=large",
+    tags: ["smug", "smile", "liyue"],
+  },
+  {
+    url: "https://pbs.twimg.com/media/Gp1MGy9XoAA-4mB?format=jpg&name=large",
+    tags: ["happy", "smile", "liyue"],
+  },
+  {
+    url: "https://pbs.twimg.com/media/Gp1MGy9WQAAT3jE?format=jpg&name=large",
+    tags: ["happy", "smile", "liyue"],
+  },
+  {
+    url: "https://pbs.twimg.com/media/Gp1LLbLXAAAZ7SC?format=jpg&name=large",
+    tags: ["happy", "smile", "liyue"],
+  },
+  {
+    url: "https://pbs.twimg.com/media/Gp1KNt1XEAAwuMn?format=jpg&name=large",
+    tags: ["happy", "smile", "liyue"],
+  },
+  {
+    url: "https://pbs.twimg.com/media/Gp00lrzXAAAWZmO?format=jpg&name=large",
+    tags: ["middle finger", "flip off", "angry"],
+  },
+  {
     url: "https://pbs.twimg.com/media/Gp0f4BoXkAAjA60?format=jpg&name=large",
     tags: ["gun", "threatening", "denial", "aether"],
   },
@@ -13,7 +49,7 @@ const allImages = [
   },
   {
     url: "https://pbs.twimg.com/media/Gpy7qg9WMAAZpsV?format=jpg&name=large",
-    tags: ["happy", "hand heart", "love"],
+    tags: ["happy", "hand heart", "love", "smile"],
   },
   {
     url: "https://pbs.twimg.com/media/Gpv_b3lWIAA8_BC?format=jpg&name=large",
@@ -21,7 +57,7 @@ const allImages = [
   },
   {
     url: "https://pbs.twimg.com/media/Gpv5vSJXIAAjWNr?format=jpg&name=large",
-    tags: ["happy", "rice", "food"],
+    tags: ["happy", "rice", "food", "smile"],
   },
   {
     url: "https://pbs.twimg.com/media/GpqWV7WWAAE7UWt?format=jpg&name=large",
@@ -29,7 +65,7 @@ const allImages = [
   },
   {
     url: "https://pbs.twimg.com/media/GpqTgsFWkAA09nI?format=jpg&name=large",
-    tags: ["hug", "cactus", "friends"],
+    tags: ["hug", "cactus", "friends", "smile"],
   },
   {
     url: "https://pbs.twimg.com/media/GpqD10aXYAAiFLt?format=jpg&name=large",
@@ -41,7 +77,7 @@ const allImages = [
   },
   {
     url: "https://pbs.twimg.com/media/GplUpXwWwAA9M9I?format=jpg&name=large",
-    tags: ["yes", "yes i did", "phineas and ferb"],
+    tags: ["yes", "yes i did", "phineas and ferb", "happy", "smile"],
   },
   {
     url: "https://pbs.twimg.com/media/GplNQK2X0AAuHut?format=jpg&name=large",
@@ -53,11 +89,11 @@ const allImages = [
   },
   {
     url: "https://pbs.twimg.com/media/GplBZZ8WUAAj1_L?format=jpg&name=large",
-    tags: ["thats the neat part", "you dont", "invincible"],
+    tags: ["thats the neat part", "you dont", "invincible", "smile"],
   },
   {
     url: "https://pbs.twimg.com/media/Gpk9rCBWgAAmfrn?format=jpg&name=large",
-    tags: ["okay get in", "coffin", "spongebob"],
+    tags: ["okay get in", "coffin", "spongebob", "smile"],
   },
   {
     url: "https://pbs.twimg.com/media/GpjW5noWEAAG5D9?format=jpg&name=large",
@@ -93,7 +129,7 @@ const allImages = [
   },
   {
     url: "https://pbs.twimg.com/media/Gndb_U1WsAAaKLc?format=jpg&name=large",
-    tags: ["stare", "cute", ":3"],
+    tags: ["stare", "cute", ":3", "smile"],
   },
   {
     url: "https://pbs.twimg.com/media/GnajowCWsAEXEvJ?format=jpg&name=small",
