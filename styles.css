@@ -363,3 +363,29 @@ body {
 .fab.fa-github {
     font-size: 1.5rem;
 }
+
+.easter-egg-container {
+    text-align: center;
+    margin: 3rem 0;
+    animation: float 3s ease-in-out infinite;
+}
+
+.easter-egg-image {
+    max-width: 200px;
+    transition: transform 0.3s ease;
+}
+
+.easter-egg-image:hover {
+    transform: scale(1.1) rotate(5deg);
+    filter: drop-shadow(0 0 15px var(--accent));
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}

@@ -339,6 +339,23 @@ function initializeGallery() {
 
     gallery.appendChild(item);
   });
+
+  const isLastPage =
+    currentPage === Math.ceil(currentFilteredImages.length / itemsPerPage);
+  const isEmptySearch = document.getElementById("searchInput").value === "";
+
+  if (isLastPage && isEmptySearch && currentFilteredImages.length > 0) {
+    const easterEggContainer = document.createElement("div");
+    easterEggContainer.className = "easter-egg-container";
+    easterEggContainer.innerHTML = `
+              <img src="https://github.com/YuukiEatsYou/Yuukis-Meme-Archive/blob/main/easteregg.png?raw=true"
+                   alt="Surprise!"
+                   class="easter-egg-image"
+                   title="You found the secret!">
+          `;
+    document.querySelector(".main-content").appendChild(easterEggContainer);
+  }
+
   updatePaginationControls();
   scrollToTop();
 }
