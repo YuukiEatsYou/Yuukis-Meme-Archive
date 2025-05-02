@@ -340,6 +340,9 @@ function initializeGallery() {
     gallery.appendChild(item);
   });
 
+  const existingEgg = document.querySelector(".easter-egg-container");
+  if (existingEgg) existingEgg.remove();
+
   const isLastPage =
     currentPage === Math.ceil(currentFilteredImages.length / itemsPerPage);
   const isEmptySearch = document.getElementById("searchInput").value === "";
