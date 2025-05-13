@@ -4,6 +4,10 @@ const itemsPerPage = 40;
 let currentFilteredImages = [];
 const allImages = [
   {
+    url: "https://pbs.twimg.com/media/Gqjo6dCX0AEPIIE?format=png&name=900x900",
+    tags: ["pizza", "beer", "never kill yourself", "food"],
+  },
+  {
     url: "https://pbs.twimg.com/media/Gp3-vyUWIAANkYX?format=jpg&name=large",
     tags: ["smug", "smile", "liyue"],
   },
