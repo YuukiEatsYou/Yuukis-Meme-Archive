@@ -1,5 +1,15 @@
 export const allImages = [
   {
+    url: "https://pbs.twimg.com/media/GrLksHgXkAARUky?format=png&name=small",
+    tags: [
+      "zero personality",
+      "all you do",
+      "send pictures of",
+      "shock",
+      "sad",
+    ],
+  },
+  {
     url: "https://pbs.twimg.com/media/Gq9KQHgWQAAlDQp?format=jpg&name=large",
     tags: ["can you", "lock the fuck in", "angry", "pointing"],
   },

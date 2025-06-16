@@ -5,6 +5,7 @@ let currentPage = 1;
 const itemsPerPage = 40;
 let currentFilteredImages = [];
 
+// Renders the image gallery with pagination and handles all gallery-related UI updates
 function initializeGallery() {
   const gallery = document.getElementById("imageGallery");
   gallery.innerHTML = "";
@@ -73,6 +74,7 @@ function initializeGallery() {
   scrollToTop();
 }
 
+// Filters images based on search input, matching against image tags
 document.getElementById("searchInput").addEventListener("input", function (e) {
   const searchTerm = e.target.value.toLowerCase();
   currentFilteredImages = allImages.filter((image) =>
@@ -82,6 +84,7 @@ document.getElementById("searchInput").addEventListener("input", function (e) {
   initializeGallery();
 });
 
+// Closes lightbox modal when clicking outside the image
 document.getElementById("lightbox").addEventListener("click", function (e) {
   if (e.target === this) {
     this.classList.remove("active");
@@ -89,6 +92,7 @@ document.getElementById("lightbox").addEventListener("click", function (e) {
   }
 });
 
+// Closes lightbox modal when Escape key is pressed
 document.addEventListener("keydown", function (e) {
   const lightbox = document.getElementById("lightbox");
   if (e.key === "Escape" && lightbox.classList.contains("active")) {
@@ -100,10 +104,12 @@ document.addEventListener("keydown", function (e) {
 const searchInput = document.getElementById("searchInput");
 const clearBtn = document.querySelector(".clear-btn");
 
+// Shows/hides clear button based on search input content
 searchInput.addEventListener("input", function (e) {
   clearBtn.classList.toggle("visible", this.value.length > 0);
 });
 
+// Clears search input and triggers re-render when clear button is clicked
 clearBtn.addEventListener("click", function () {
   searchInput.value = "";
   searchInput.dispatchEvent(new Event("input"));
@@ -118,6 +124,7 @@ viewTagsBtn.className = "view-tags-btn";
 viewTagsBtn.textContent = "View All Tags";
 document.querySelector(".search-container").prepend(viewTagsBtn);
 
+// Counts occurrences of each tag across all images
 function collectTags() {
   const tagCounts = {};
 
@@ -130,6 +137,7 @@ function collectTags() {
   return tagCounts;
 }
 
+// Opens tag modal and populates it with all tags sorted by usage count
 viewTagsBtn.addEventListener("click", () => {
   const tags = collectTags();
   tagsList.innerHTML = Object.entries(tags)
@@ -148,16 +156,20 @@ viewTagsBtn.addEventListener("click", () => {
   setTimeout(() => tagsModal.classList.add("active"), 10);
 });
 
+// Closes the tags modal with a fade-out animation
 function closeTagsModal() {
   tagsModal.classList.remove("active");
   setTimeout(() => (tagsModal.style.display = "none"), 300);
 }
 
+// Closes tags modal when clicking the close button
 document.querySelector(".close-tags").addEventListener("click", closeTagsModal);
+// Closes tags modal when clicking outside the modal content
 tagsModal.addEventListener("click", (e) => {
   if (e.target === tagsModal) closeTagsModal();
 });
 
+// Searches for selected tag when clicking on a tag in the modal
 tagsList.addEventListener("click", (e) => {
   if (e.target.closest(".tag-count")) {
     const tag = e.target
@@ -170,12 +182,14 @@ tagsList.addEventListener("click", (e) => {
   }
 });
 
+// Closes tags modal when Escape key is pressed
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && tagsModal.classList.contains("active")) {
     closeTagsModal();
   }
 });
 
+// Creates and updates pagination controls based on current page and total pages
 function updatePaginationControls() {
   const totalPages = Math.ceil(currentFilteredImages.length / itemsPerPage);
   const pagination = document.createElement("div");
@@ -203,6 +217,7 @@ function updatePaginationControls() {
   document.querySelector("main").appendChild(pagination);
 }
 
+// Smoothly scrolls to the top of the page with fallback for older browsers
 function scrollToTop() {
   try {
     window.scrollTo({
@@ -217,6 +232,7 @@ function scrollToTop() {
   document.body.scrollTop = 0;
 }
 
+// Initializes the gallery when the page loads
 window.onload = () => {
   currentFilteredImages = [...allImages];
   initializeGallery();
