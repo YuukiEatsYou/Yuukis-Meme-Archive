@@ -1,5 +1,9 @@
 export const allImages = [
   {
+    url: "https://pbs.twimg.com/media/GtvnjFZWcAAkApS?format=jpg&name=large",
+    tags: ["crazy", "stare", "zoom", "close up"],
+  },
+  {
     url: "https://pbs.twimg.com/media/GrLksHgXkAARUky?format=png&name=small",
     tags: [
       "zero personality",
