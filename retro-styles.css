@@ -122,7 +122,7 @@
     transition: all 0.1s;
 }
 
-.clear-btn {
+.retro .clear-btn {
     background: var(--surface);
     border: 2px solid;
     border-color: var(--button-highlight) var(--button-shadow)
