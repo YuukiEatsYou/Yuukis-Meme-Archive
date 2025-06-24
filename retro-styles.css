@@ -107,7 +107,6 @@
 }
 
 .retro .view-tags-btn,
-.retro .clear-btn,
 .retro .pagination button,
 .retro .theme-toggle {
     background: var(--surface);
@@ -121,6 +120,24 @@
     font-weight: bold;
     cursor: pointer;
     transition: all 0.1s;
+}
+
+.clear-btn {
+    background: var(--surface);
+    border: 2px solid;
+    border-color: var(--button-highlight) var(--button-shadow)
+        var(--button-shadow) var(--button-highlight);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    order: 3;
 }
 
 .retro .view-tags-btn:hover,
@@ -477,4 +494,101 @@
     border-color: var(--button-shadow) var(--button-highlight)
         var(--button-highlight) var(--button-shadow);
     font-size: 14px;
+}
+
+.retro .sp-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--surface);
+    border: 2px solid;
+    border-color: var(--button-highlight) var(--button-shadow)
+        var(--button-shadow) var(--button-highlight);
+    z-index: 10000;
+    padding: 8px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.5);
+    animation: retroAppear 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes retroAppear {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -45%) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.retro .sp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--title-bar);
+    color: var(--button-highlight);
+    padding: 4px 8px;
+    margin: -8px -8px 8px -8px;
+    border-bottom: 2px solid var(--text-primary);
+}
+
+.retro .sp-title {
+    color: white;
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.retro .close-sp {
+    background: var(--surface);
+    border: 2px solid;
+    border-color: var(--button-highlight) var(--button-shadow)
+        var(--button-shadow) var(--button-highlight);
+    color: var(--text-primary);
+    font-size: 1rem;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: all 0.1s;
+}
+
+.retro .close-sp:hover {
+    background: #e0e0e0;
+}
+
+.retro .close-sp:active {
+    background: #a0a0a0;
+    border-color: var(--button-shadow) var(--button-highlight)
+        var(--button-highlight) var(--button-shadow);
+}
+
+.retro .sp-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.retro .sp-img {
+    max-width: 100%;
+    border: 2px solid;
+    border-color: var(--button-shadow) var(--button-highlight)
+        var(--button-highlight) var(--button-shadow);
+    max-height: 180px;
+    object-fit: cover;
+}
+
+.retro .sp-text {
+    text-align: center;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.4;
 }
