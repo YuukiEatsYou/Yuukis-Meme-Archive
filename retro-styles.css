@@ -1,0 +1,480 @@
+/* Retro Windows 98 Theme */
+
+.retro {
+    --accent: #000080;
+    --background: #008080;
+    --surface: #c0c0c0;
+    --text-primary: #000000;
+    --text-secondary: #404040;
+    --button-highlight: #ffffff;
+    --button-shadow: #808080;
+    --button-dark: #000000;
+    --title-bar: #000080;
+}
+
+.retro * {
+    border-radius: 0;
+}
+
+.retro body {
+    margin: 0;
+    padding: 16px;
+    background-color: var(--background);
+    background-image:
+        linear-gradient(45deg, #a0a0a0 25%, transparent 25%),
+        linear-gradient(-45deg, #a0a0a0 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #a0a0a0 75%),
+        linear-gradient(-45deg, transparent 75%, #a0a0a0 75%);
+    background-size: 16px 16px;
+    background-position:
+        0 0,
+        0 8px,
+        8px -8px,
+        -8px 0px;
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.retro .profile-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.retro .profile-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--surface);
+    padding: 20px;
+    border: 2px solid;
+    border-color: var(--button-shadow) var(--button-highlight)
+        var(--button-highlight) var(--button-shadow);
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+.retro .profile-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 2px solid;
+    border-color: var(--button-shadow) var(--button-highlight)
+        var(--button-highlight) var(--button-shadow);
+}
+
+.retro .twitter-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.1s;
+}
+
+.retro .twitter-link:hover {
+    text-decoration: underline;
+}
+
+.retro .search-container {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.retro #searchInput {
+    border-radius: 0;
+    flex: 1;
+    max-width: 600px;
+    padding: 8px 12px;
+    background: var(--surface);
+    border: 2px solid;
+    border-color: var(--button-shadow) var(--button-highlight)
+        var(--button-highlight) var(--button-shadow);
+    font-size: 1rem;
+    color: var(--text-primary);
+    box-shadow:
+        inset 2px 2px var(--button-shadow),
+        inset -2px -2px var(--button-highlight);
+}
+
+.retro #searchInput::placeholder {
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.retro .view-tags-btn,
+.retro .clear-btn,
+.retro .pagination button,
+.retro .theme-toggle {
+    background: var(--surface);
+    border: 2px solid;
+    border-color: var(--button-highlight) var(--button-shadow)
+        var(--button-shadow) var(--button-highlight);
+    color: var(--text-primary);
+    padding: 8px 16px;
+    font-family: "MS Sans Serif", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+.retro .view-tags-btn:hover,
+.retro .clear-btn:hover,
+.retro .pagination button:hover:not(:disabled),
+.retro .theme-toggle:hover {
+    border-color: var(--button-shadow) var(--button-highlight)
+        var(--button-highlight) var(--button-shadow);
+}
+
+.retro .view-tags-btn:active,
+.retro .clear-btn:active,
+.retro .pagination button:active:not(:disabled),
+.retro .theme-toggle:active {
+    background: #a0a0a0;
+    border-color: var(--button-shadow) var(--button-highlight)
+        var(--button-highlight) var(--button-shadow);
+}
+
+.retro .clear-btn {
+    border-radius: 0;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.retro .clear-btn.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.retro .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.retro .gallery-item {
+    position: relative;
+    background: var(--surface);
+    border: 2px solid;
+    border-color: var(--button-shadow) var(--button-highlight)
+        var(--button-highlight) var(--button-shadow);
+    overflow: hidden;
+    transition: all 0.1s;
+}
+
+.retro .gallery-item:hover {
+    border-color: var(--button-highlight) var(--button-shadow)
+        var(--button-shadow) var(--button-highlight);
+    transform: translateY(-2px);
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.retro .gallery-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 2px solid var(--button-shadow);
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+.retro .tags {
+    border-radius: 0;
+    padding: 10px;
+    background: var(--surface);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.retro .tag {
+    border-radius: 0;
+    background: var(--surface);
+    color: var(--text-primary);
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid;
+    border-color: var(--button-highlight) var(--button-shadow)
+        var(--button-shadow) var(--button-highlight);
+}
+
+.retro .tag:hover {
+    background: #e0e0e0;
+}
+
+.retro .lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.retro .lightbox-image {
+    position: absolute;
+    max-width: 90%;
+    max-height: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid;
+    border-color: var(--button-highlight) var(--button-shadow)
+        var(--button-shadow) var(--button-highlight);
+}
+
+.retro .lightbox.active {
+    display: block;
+}
+
+.retro .tags-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2000;
+    overflow-y: auto;
+}
+
+.retro .tags-content {
+    position: relative;
+    background: var(--surface);
+    max-width: 600px;
+    margin: 2rem auto;
+    border: 2px solid;
+    border-color: var(--button-shadow) var(--button-highlight)
+        var(--button-highlight) var(--button-shadow);
+}
+
+.retro .close-tags {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.retro .tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 1rem;
+    padding: 16px;
+}
+
+.retro .tag-count {
+    border-radius: 0;
+    background: var(--surface);
+    padding: 6px 12px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid;
+    border-color: var(--button-highlight) var(--button-shadow)
+        var(--button-shadow) var(--button-highlight);
+}
+
+.retro .tag-count:hover {
+    background: #e0e0e0;
+}
+
+.retro .tag-count span:last-child {
+    border-radius: 0;
+    background: var(--surface);
+    padding: 2px 8px;
+    font-size: 0.9rem;
+    border: 2px solid;
+    border-color: var(--button-shadow) var(--button-highlight)
+        var(--button-highlight) var(--button-shadow);
+}
+
+@media (max-width: 768px) {
+    .retro .profile-container {
+        flex-direction: column;
+    }
+
+    .retro .search-container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 0 20px;
+    }
+
+    .retro #searchInput,
+    .retro .view-tags-btn,
+    .retro .clear-btn {
+        order: initial;
+        max-width: none;
+        width: 100%;
+    }
+
+    .retro .view-tags-btn {
+        text-align: center;
+    }
+
+    .retro .clear-btn {
+        margin-top: 0;
+        height: 44px;
+    }
+}
+
+@media (min-width: 769px) {
+    .retro .search-container {
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.retro .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 2rem 0;
+    padding: 15px;
+    min-height: 60px;
+}
+
+.retro .pagination span {
+    line-height: 1;
+    padding: 0 15px;
+    font-weight: bold;
+}
+
+.retro .pagination button {
+    padding: 10px 25px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 0;
+}
+
+.retro .pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.retro .main-content {
+    flex: 1;
+}
+
+.retro .theme-toggle {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 25px;
+    border-radius: 0;
+}
+
+.retro .site-footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: auto;
+}
+
+.retro .site-footer a {
+    color: var(--accent);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    transition: all 0.1s;
+}
+
+.retro .site-footer a:hover {
+    text-decoration: underline;
+}
+
+.retro .fab.fa-github {
+    font-size: 1.5rem;
+}
+
+.retro .easter-egg-container {
+    text-align: center;
+    margin: 3rem 0;
+    animation: float 3s ease-in-out infinite;
+}
+
+.retro .easter-egg-image {
+    max-width: 200px;
+    transition: transform 0.3s ease;
+    border-color: var(--button-shadow) var(--button-highlight)
+        var(--button-highlight) var(--button-shadow);
+}
+
+.retro .easter-egg-image:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Windows 98 Taskbar */
+.retro .taskbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--surface);
+    border-top: 2px solid var(--button-highlight);
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    z-index: 3000;
+}
+
+.retro .start-button {
+    background: var(--surface);
+    border: 2px solid;
+    border-color: var(--button-highlight) var(--button-shadow)
+        var(--button-shadow) var(--button-highlight);
+    padding: 4px 12px;
+    font-weight: bold;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.retro .taskbar-time {
+    margin-left: auto;
+    padding: 4px 8px;
+    background: var(--surface);
+    border: 2px solid;
+    border-color: var(--button-shadow) var(--button-highlight)
+        var(--button-highlight) var(--button-shadow);
+    font-size: 14px;
+}
