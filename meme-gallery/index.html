@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Yuuki's Hu Tao memes</title>
+        <link
+            rel="icon"
+            type="image/jpg"
+            href="https://pbs.twimg.com/profile_images/1948406724031123456/ODEz2fQJ_400x400.jpg"
+        />
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="retro-styles.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+    </head>
+    <body>
+        <header class="profile-header">
+            <div class="profile-container">
+                <img
+                    src="../assets/pfp.jpg"
+                    alt="Profile Picture"
+                    class="profile-img"
+                />
+                <a
+                    href="https://x.com/YuukiEatsYou"
+                    class="twitter-link"
+                    target="_blank"
+                    >@YuukiEatsYou</a
+                >
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="tags-modal" id="tagsModal">
+                <div class="tags-content">
+                    <button class="close-tags">✕</button>
+                    <h3>All Tags</h3>
+                    <div class="tags-list" id="tagsList"></div>
+                </div>
+            </div>
+            <div class="search-container">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search by tags..."
+                />
+                <button class="clear-btn" aria-label="Clear search">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M18 6L6 18M6 6l12 12"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                        />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="gallery" id="imageGallery">
+                <!-- Images will be added here dynamically -->
+            </div>
+        </main>
+        <!-- <button id="theme-toggle" class="theme-toggle">
+            TOGGLE RETRO MODE
+        </button> -->
+        <div class="lightbox" id="lightbox">
+            <img class="lightbox-image" id="lightboxImage" />
+        </div>
+
+        <script src="script.js" type="module"></script>
+        <script src="theme-toggle.js" type="module"></script>
+        <footer class="site-footer">
+            <a
+                href="https://github.com/YuukiEatsYou/Yuukis-Meme-Archive"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <i class="fab fa-github"></i>
+                View on GitHub
+            </a>
+        </footer>
+    </body>
+</html>
