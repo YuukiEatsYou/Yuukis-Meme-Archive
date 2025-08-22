@@ -1,7 +1,8 @@
 # Yuukis-Meme-Archive
 
 # Note
-because github keeps pissing me off, i moved all my repos at my own gitea instance at https://git.yuukicult.com/Yuuki
+because github keeps pissing me off, i moved all my repos at my own gitea instance at 
+https://git.yuukicult.com/Yuuki
 all future updates will be pushed there
 
 Code for [Yuuki's Meme Archive](https://yuukieatsyou.neocities.org/)
