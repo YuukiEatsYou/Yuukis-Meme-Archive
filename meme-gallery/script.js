@@ -370,7 +370,7 @@ class MemeGallery {
       const easterEggContainer = document.createElement("div");
       easterEggContainer.className = "easter-egg-container";
       easterEggContainer.innerHTML = `
-        <img src="https://github.com/YuukiEatsYou/Yuukis-Meme-Archive/blob/main/easteregg.png?raw=true"
+        <img src="/assets/easteregg.png"
              alt="Surprise! You found the secret easter egg!"
              class="easter-egg-image"
              title="You found the secret!"

@@ -1,18 +1,62 @@
 export const allImages = [
   {
-    url: "https://pbs.twimg.com/media/Gw9HsypWwAAU3AE?format=jpg&name=medium",
+    url: "/assets/memes/prove.png",
+    tags: ["know", "cant prove it"],
+  },
+  {
+    url: "/assets/memes/understand.png",
+    tags: ["i get it now", "doesnt understand"],
+  },
+  {
+    url: "/assets/memes/think2.png",
+    tags: ["thinking", "monkey"],
+  },
+  {
+    url: "/assets/memes/untao.png",
+    tags: ["thats it", "untaos your hu"],
+  },
+  {
+    url: "/assets/memes/doessheknow.png",
+    tags: ["does she know", "silly"],
+  },
+  {
+    url: "/assets/memes/irontao.jpg",
+    tags: ["ironman", "marvel", "super hero"],
+  },
+  {
+    url: "/assets/memes/mafia.png",
+    tags: ["mafia", "gun", "car"],
+  },
+  {
+    url: "/assets/memes/solo.png",
+    tags: ["solo", "your favorite verse"],
+  },
+  {
+    url: "/assets/memes/taosdaymydudes.jpg",
+    tags: ["taosday", "my dudes"],
+  },
+  {
+    url: "/assets/memes/evillaugh.gif",
+    tags: ["evil", "laugh"],
+  },
+  {
+    url: "/assets/memes/cinema.jpg",
+    tags: ["hands up", "absolute cinema", "happy"],
+  },
+  {
+    url: "/assets/memes/hidingspot.jpg",
     tags: ["saddam hussein", "hiding place"],
   },
   {
-    url: "https://pbs.twimg.com/media/Gv7hmB3WoAA9Ebg?format=jpg&name=large",
+    url: "/assets/memes/grokifgood.jpg",
     tags: ["happy", "grok if it was good"],
   },
   {
-    url: "https://pbs.twimg.com/media/GtvnjFZWcAAkApS?format=jpg&name=large",
+    url: "/assets/memes/crazystarezoom.jpg",
     tags: ["crazy", "stare", "zoom", "close up"],
   },
   {
-    url: "https://pbs.twimg.com/media/GrLksHgXkAARUky?format=png&name=small",
+    url: "/assets/memes/zeropersonality.png",
     tags: [
       "zero personality",
       "all you do",
@@ -22,11 +66,11 @@ export const allImages = [
     ],
   },
   {
-    url: "https://pbs.twimg.com/media/Gq9KQHgWQAAlDQp?format=jpg&name=large",
+    url: "/assets/memes/locktfin.jpg",
     tags: ["can you", "lock the fuck in", "angry", "pointing"],
   },
   {
-    url: "https://pbs.twimg.com/media/Gq3iG4PWcAAI4He?format=jpg&name=large",
+    url: "/assets/memes/niceopinion.jpg",
     tags: [
       "nice opinion",
       "too bad",
@@ -37,175 +81,143 @@ export const allImages = [
     ],
   },
   {
-    url: "https://pbs.twimg.com/media/Gqjo6dCX0AEPIIE?format=png&name=900x900",
+    url: "/assets/memes/neverkys.png",
     tags: ["pizza", "beer", "never kill yourself", "food"],
   },
   {
-    url: "https://pbs.twimg.com/media/Gp3-vyUWIAANkYX?format=jpg&name=large",
-    tags: ["smug", "smile", "liyue"],
-  },
-  {
-    url: "https://pbs.twimg.com/media/Gp3-vzWWcAAQKsH?format=jpg&name=large",
-    tags: ["smug", "smile", "liyue"],
-  },
-  {
-    url: "https://pbs.twimg.com/media/Gp3-vyQWoAAm1Gt?format=jpg&name=large",
-    tags: ["smug", "smile", "liyue"],
-  },
-  {
-    url: "https://pbs.twimg.com/media/Gp3-vyIWcAAI1m7?format=jpg&name=large",
-    tags: ["smug", "smile", "liyue"],
-  },
-  {
-    url: "https://pbs.twimg.com/media/Gp1MGy9XoAA-4mB?format=jpg&name=large",
-    tags: ["happy", "smile", "liyue"],
-  },
-  {
-    url: "https://pbs.twimg.com/media/Gp1MGy9WQAAT3jE?format=jpg&name=large",
-    tags: ["happy", "smile", "liyue"],
-  },
-  {
-    url: "https://pbs.twimg.com/media/Gp1LLbLXAAAZ7SC?format=jpg&name=large",
-    tags: ["happy", "smile", "liyue"],
-  },
-  {
-    url: "https://pbs.twimg.com/media/Gp1KNt1XEAAwuMn?format=jpg&name=large",
-    tags: ["happy", "smile", "liyue"],
-  },
-  {
-    url: "https://pbs.twimg.com/media/Gp00lrzXAAAWZmO?format=jpg&name=large",
+    url: "/assets/memes/middlefinger.jpg",
     tags: ["middle finger", "flip off", "angry"],
   },
   {
-    url: "https://pbs.twimg.com/media/Gp0f4BoXkAAjA60?format=jpg&name=large",
+    url: "/assets/memes/guntohead.jpg",
     tags: ["gun", "threatening", "denial", "aether"],
   },
   {
-    url: "https://pbs.twimg.com/media/Gp0aCVYXgAAHSke?format=jpg&name=medium",
+    url: "/assets/memes/pookiegangsta.jpg",
     tags: ["dont call me pookie", "im a gangsta", "smug"],
   },
   {
-    url: "https://pbs.twimg.com/media/Gpy7qg9WMAAZpsV?format=jpg&name=large",
+    url: "/assets/memes/hearthand.jpg",
     tags: ["happy", "hand heart", "love", "smile"],
   },
   {
-    url: "https://pbs.twimg.com/media/Gpv_b3lWIAA8_BC?format=jpg&name=large",
+    url: "/assets/memes/sandwich.jpg",
     tags: ["smug", "sandwich", "food"],
   },
   {
-    url: "https://pbs.twimg.com/media/Gpv5vSJXIAAjWNr?format=jpg&name=large",
+    url: "/assets/memes/ricebowl.jpg",
     tags: ["happy", "rice", "food", "smile"],
   },
   {
-    url: "https://pbs.twimg.com/media/GpqWV7WWAAE7UWt?format=jpg&name=large",
+    url: "/assets/memes/fennekin.jpg",
     tags: ["pokemon", "fennekin"],
   },
   {
-    url: "https://pbs.twimg.com/media/GpqTgsFWkAA09nI?format=jpg&name=large",
+    url: "/assets/memes/cactus.jpg",
     tags: ["hug", "cactus", "friends", "smile"],
   },
   {
-    url: "https://pbs.twimg.com/media/GpqD10aXYAAiFLt?format=jpg&name=large",
+    url: "/assets/memes/cookie.jpg",
     tags: ["happy", "cookie", "eating", "cute", "food"],
   },
   {
-    url: "https://pbs.twimg.com/media/Gpp62FAWQAA0rhC?format=png&name=small",
+    url: "/assets/memes/toodumb.png",
     tags: ["sad", "sob", "im too dumb"],
   },
   {
-    url: "https://pbs.twimg.com/media/GplUpXwWwAA9M9I?format=jpg&name=large",
+    url: "/assets/memes/yesidid.jpg",
     tags: ["yes", "yes i did", "phineas and ferb", "happy", "smile"],
   },
   {
-    url: "https://pbs.twimg.com/media/GplNQK2X0AAuHut?format=jpg&name=large",
+    url: "/assets/memes/setofskills.jpg",
     tags: ["i have a very particular set of skills", "phone", "calling"],
   },
   {
-    url: "https://pbs.twimg.com/media/GplDs2WWoAA5DlO?format=jpg&name=large",
+    url: "/assets/memes/builtdifferent.jpg",
     tags: ["built different", "muscle", "buff"],
   },
   {
-    url: "https://pbs.twimg.com/media/GplBZZ8WUAAj1_L?format=jpg&name=large",
+    url: "/assets/memes/neatpart.jpg",
     tags: ["thats the neat part", "you dont", "invincible", "smile"],
   },
   {
-    url: "https://pbs.twimg.com/media/Gpk9rCBWgAAmfrn?format=jpg&name=large",
+    url: "/assets/memes/getin.jpg",
     tags: ["okay get in", "coffin", "spongebob", "smile"],
   },
   {
-    url: "https://pbs.twimg.com/media/GpjW5noWEAAG5D9?format=jpg&name=large",
+    url: "/assets/memes/nofeel.jpg",
     tags: ["sad", "i no longer feel", "stare"],
   },
   {
-    url: "https://pbs.twimg.com/media/GpjSicgWQAAX1hs?format=jpg&name=large",
+    url: "/assets/memes/kindaagree.jpg",
     tags: ["never cook again", "i kinda agree"],
   },
   {
-    url: "https://pbs.twimg.com/media/GpUGKQPWQAAlRkW?format=jpg&name=large",
+    url: "/assets/memes/thousandyard.jpg",
     tags: ["thousand yard stare", "soldier", "war", "traumatized"],
   },
   {
-    url: "https://pbs.twimg.com/media/GpKlgfkWkAAeEVD?format=jpg&name=medium",
+    url: "/assets/memes/cashorcard.jpg",
     tags: ["cashier", "cash or card", "bored"],
   },
   {
-    url: "https://pbs.twimg.com/media/GpGz5tUXgAAEKA7?format=jpg&name=large",
+    url: "/assets/memes/monalisa.jpg",
     tags: ["art", "mona lisa"],
   },
   {
-    url: "https://pbs.twimg.com/media/GoyBDXyWcAAVWfr?format=jpg&name=large",
+    url: "/assets/memes/gaming.jpg",
     tags: ["gaming", "minecraft"],
   },
   {
-    url: "https://pbs.twimg.com/media/GoDQvqlXAAA57zD?format=jpg&name=large",
+    url: "/assets/memes/callit.jpg",
     tags: ["bait", "mental retardation", "call it", "stare"],
   },
   {
-    url: "https://pbs.twimg.com/media/GneEJPPW0AADMEY?format=png&name=900x900",
+    url: "/assets/memes/yantao.png",
     tags: ["yanfei", "yantao", "body swap"],
   },
   {
-    url: "https://pbs.twimg.com/media/Gndb_U1WsAAaKLc?format=jpg&name=large",
+    url: "/assets/memes/catface.jpg",
     tags: ["stare", "cute", ":3", "smile"],
   },
   {
-    url: "https://pbs.twimg.com/media/GnajowCWsAEXEvJ?format=jpg&name=small",
+    url: "/assets/memes/xdddddd.jpg",
     tags: ["laughing", "stare", "funny", "XD"],
   },
   {
-    url: "https://pbs.twimg.com/media/GnaNXECXIAAEBA5?format=jpg&name=large",
+    url: "/assets/memes/laptopstare.jpg",
     tags: ["laptop", "stare", "sad", "angry"],
   },
   {
-    url: "https://pbs.twimg.com/media/GnaBnVXWIAAOuo1?format=jpg&name=large",
+    url: "/assets/memes/explain.jpg",
     tags: ["talking", "explain", "listen here"],
   },
   {
-    url: "https://pbs.twimg.com/media/GnaKnKmWIAAaGu9?format=jpg&name=large",
+    url: "/assets/memes/smugpray.jpg",
     tags: ["praying", "please", "smug", "smile"],
   },
   {
-    url: "https://pbs.twimg.com/media/GnZ-RmpXcAA7Fk9?format=jpg&name=large",
+    url: "/assets/memes/sadstare.jpg",
     tags: ["depressed", "sad", "stare"],
   },
   {
-    url: "https://pbs.twimg.com/media/GnZ9IucWIAA9O1-?format=jpg&name=large",
+    url: "/assets/memes/boxcarry.jpg",
     tags: ["carrying box", "bashame", "shikanoko", "My Deer Friend Nokotan"],
   },
   {
-    url: "https://pbs.twimg.com/media/GnQTMggXgAErejS?format=jpg&name=large",
+    url: "/assets/memes/punch.jpg",
     tags: ["punch", "angry"],
   },
   {
-    url: "https://pbs.twimg.com/media/GnP3Q5AXAAALC2m?format=png&name=360x360",
+    url: "/assets/memes/greatbutt.png",
     tags: ["retro game", "great but", "metal gear solid"],
   },
   {
-    url: "https://pbs.twimg.com/media/GnPMw1IWUAAUGg2?format=png&name=900x900",
+    url: "/assets/memes/tradeoffer.png",
     tags: ["trade offer", "primogems", "yahoo"],
   },
   {
-    url: "https://pbs.twimg.com/media/GnLaScmXQAAyvIn?format=jpg&name=large",
+    url: "/assets/memes/fixthat.jpg",
     tags: [
       "yanfei",
       "yantao",
@@ -216,19 +228,19 @@ export const allImages = [
     ],
   },
   {
-    url: "https://pbs.twimg.com/media/GnLNZLDWoAA21dt?format=jpg&name=large",
+    url: "/assets/memes/raincry.jpg",
     tags: ["sad", "crying", "rain"],
   },
   {
-    url: "https://pbs.twimg.com/media/GnEJUSZW0AAQ7yO?format=jpg&name=large",
+    url: "/assets/memes/prison.jpg",
     tags: ["sad", "prison", "jail", "arrest"],
   },
   {
-    url: "https://pbs.twimg.com/media/GnLEYJfWwAAflzd?format=jpg&name=medium",
+    url: "/assets/memes/phonegames.jpg",
     tags: ["games", "phone", "stare"],
   },
   {
-    url: "https://pbs.twimg.com/media/GnF6m4DWYAAnFKY?format=jpg&name=large",
+    url: "/assets/memes/hanging.jpg",
     tags: [
       "bright side",
       "dark side",
@@ -239,95 +251,95 @@ export const allImages = [
     ],
   },
   {
-    url: "https://pbs.twimg.com/media/GnF1eGRW4AABncH?format=jpg&name=large",
+    url: "/assets/memes/headpat.jpg",
     tags: ["honkai star rail", "headpat"],
   },
   {
-    url: "https://pbs.twimg.com/media/GnFXn_NXkAIISLI?format=jpg&name=medium",
+    url: "/assets/memes/order.jpg",
     tags: ["yanfei", "yantao", "she wants to order", "yuri"],
   },
   {
-    url: "https://pbs.twimg.com/media/GnE0P7aXYAA9_d3?format=jpg&name=large",
+    url: "/assets/memes/unfollow.jpg",
     tags: ["wait", "don't unfollow", "sad"],
   },
   {
-    url: "https://pbs.twimg.com/media/GnDOJ49WgAE_u_M?format=jpg&name=large",
+    url: "/assets/memes/neuron.jpg",
     tags: ["qiqi", "neuron activation", "monkey"],
   },
   {
-    url: "https://pbs.twimg.com/media/Gm6gT7aWoAAH9ZG?format=jpg&name=large",
+    url: "/assets/memes/shockdrink.jpg",
     tags: ["drinking", "shocked", "stare"],
   },
   {
-    url: "https://pbs.twimg.com/media/Gm6cFd6WgAAwjWT?format=jpg&name=large",
+    url: "/assets/memes/waitamin.jpg",
     tags: ["wait a minute", "smug", "smile", "stare"],
   },
   {
-    url: "https://pbs.twimg.com/media/Gm6aKOoWoAAkuhA?format=jpg&name=large",
+    url: "/assets/memes/deserve.jpg",
     tags: ["you get what you fucking deserve", "joker"],
   },
   {
-    url: "https://pbs.twimg.com/media/Gm6U17XXQAA36na?format=jpg&name=large",
+    url: "/assets/memes/segs.jpg",
     tags: ["segs", "sex", "bed", "pointing", "stare"],
   },
   {
-    url: "https://pbs.twimg.com/media/Gm5yUYIXgAAd0SL?format=jpg&name=large",
+    url: "/assets/memes/pointing.jpg",
     tags: ["pointing", "that's me", "Leonardo DiCaprio", "stare"],
   },
   {
-    url: "https://pbs.twimg.com/media/Gm18UeeWcAA2Av1?format=jpg&name=large",
+    url: "/assets/memes/arlehug.jpg",
     tags: ["arlecchino", "hug", "friends", "happy"],
   },
   {
-    url: "https://pbs.twimg.com/media/Gm11qasW8AAsD2t?format=jpg&name=4096x4096",
+    url: "/assets/memes/yaynay.jpg",
     tags: ["yay nay", "nah yeah", "drake", "compare"],
   },
   {
-    url: "https://pbs.twimg.com/media/Gm1L0LKXEAAXasX?format=png&name=900x900",
+    url: "/assets/memes/plsrespond.png",
     tags: ["pp", "please respond", "stare"],
   },
   {
-    url: "https://pbs.twimg.com/media/GmxcTT8bcAA3PWT?format=jpg&name=large",
+    url: "/assets/memes/yantaokiss.jpg",
     tags: ["yanfei", "yantao", "kiss", "yuri"],
   },
   {
-    url: "https://pbs.twimg.com/media/GmxUD44boAAearo?format=jpg&name=large",
+    url: "/assets/memes/qiqirocket.jpg",
     tags: ["qiqi", "rocket launcher", "murder", "team fortress 2", "soldier"],
   },
   {
-    url: "https://pbs.twimg.com/media/GmxK5nHXAAE_pOJ?format=jpg&name=large",
+    url: "/assets/memes/weddingrun.jpg",
     tags: ["wedding", "running", "aether", "escape", "disgust", "denial"],
   },
   {
-    url: "https://pbs.twimg.com/media/Gmw-nNBWwAAzmJY?format=jpg&name=large",
+    url: "/assets/memes/sql.jpg",
     tags: ["reading", "book", "confused", "programming"],
   },
   {
-    url: "https://pbs.twimg.com/media/Gmw48gfWIAAB8MV?format=jpg&name=large",
+    url: "/assets/memes/krustykrab.jpg",
     tags: ["krusty krab", "burger", "spongebob", "food"],
   },
   {
-    url: "https://pbs.twimg.com/media/Gmwv3XIbIAAmiSy?format=jpg&name=large",
+    url: "/assets/memes/handsup.jpg",
     tags: ["police", "tax evasion", "arrest"],
   },
   {
-    url: "https://pbs.twimg.com/media/Gmwp4cvX0AA2XUD?format=jpg&name=large",
+    url: "/assets/memes/lol.jpg",
     tags: ["sleepy", "tired", "defeat", "bed", "league of legends"],
   },
   {
-    url: "https://pbs.twimg.com/media/Gmwd18fbsAA8od-?format=jpg&name=large",
+    url: "/assets/memes/knockout.jpg",
     tags: ["boxing", "knock out", "aether"],
   },
   {
-    url: "https://pbs.twimg.com/media/GmwX5DwXQAAATeI?format=jpg&name=large",
+    url: "/assets/memes/ewwwno.jpg",
     tags: ["kiss", "disgust", "aether", "no", "denial"],
   },
   {
-    url: "https://pbs.twimg.com/media/GmmatHuasAAmWwx?format=jpg&name=large",
+    url: "/assets/memes/furinahug.jpg",
     tags: ["hug", "furina", "happy"],
   },
   {
-    url: "https://pbs.twimg.com/media/Gmk_bI0WAAEa9xT?format=jpg&name=medium",
+    url: "/assets/memes/bible.jpg",
     tags: ["reading", "bible", "book", "happy"],
   },
 ];
